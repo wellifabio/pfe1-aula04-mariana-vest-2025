@@ -3,7 +3,6 @@ var carrinho = JSON.parse(localStorage.getItem('carrinho'));
 if (carrinho == null) {
     carrinho = [];
 }else{
-    console.table(carrinho);
     exibirCarrinho();
 }
 
