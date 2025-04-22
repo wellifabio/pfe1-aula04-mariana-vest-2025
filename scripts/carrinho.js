@@ -18,7 +18,11 @@ function exibirCarrinho() {
             <td>${produto.descricao}</td>
             <td>R$ ${produto.preco.toFixed(2)}</td>
             <td><img src='${produto.imagem}'></td>
-            <td><button onclick='add(${indice})'>+</button>${produto.quantidade}<button onclick='sub(${indice})'>-</button></td>
+            <td>
+                <button onclick='add(${indice})'>+</button>
+                <input type='number' value='${produto.quantidade}' disabled=true>
+                <button onclick='sub(${indice})'>-</button>
+            </td>
             <td>${produto.total.toFixed(2)}</td>
         `;
         tbody.appendChild(tr);
